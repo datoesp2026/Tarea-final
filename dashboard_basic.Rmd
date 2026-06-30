@@ -1,5 +1,5 @@
 ---
-title: "My Dashbord at IAS"
+title: "Tarea final"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
@@ -12,28 +12,34 @@ library(flexdashboard) # always
 
 <!-- links -->
 ```{r}
-map1link=
+map1link='https://github.com/datoesp2026/Tarea-final/raw/main/map_rook.rds'
 viz1=url(map1link)
 
-map2link=
+map2link='https://github.com/datoesp2026/Tarea-final/raw/main/map_knn.rds'
 viz2=url(map2link)
+
+map3link='https://github.com/datoesp2026/Tarea-final/raw/main/map_band.rds'
+viz3=url(map3link)
+
+map4link='https://github.com/datoesp2026/Tarea-final/raw/main/map_kernel.rds'
+viz4=url(map4link)
 ```
 
 ## Intro {.sidebar}
 
-I can give some textual explanation here!
+Se observa 4 mapas distritales del departamento de Lima, mostrando su relación entre distritos con respecto a la variable de educación. 
 
 
 ## Column {data-width="450"}
 
-### GIVE ME A TITLE 1 <!-- a title for plot -->
+### Método Contigüidad (Queen) 
 
 ```{r}
 
 readRDS(viz1)
 ```
 
-### GIVE ME A TITLE 2
+### Método K-vecinos fijos (binario)
 
 ```{r}
 
@@ -42,14 +48,14 @@ readRDS(viz2)
 
 ## Column {data-width="550"}
 
-### GIVE ME A TITLE 3
+### Método Banda de distancia (binario)
 
 ```{r}
-readRDS(viz1)
+readRDS(viz3)
 ```
 
-### GIVE ME A TITLE 4
+### Método K-vecinos con peso continuo
 
 ```{r}
-readRDS(viz2)
+readRDS(viz4)
 ```
